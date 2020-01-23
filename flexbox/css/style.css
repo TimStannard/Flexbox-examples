@@ -32,6 +32,7 @@ h4,
 
 body {
   font-family: Arial, sans-serif;
+  padding:5px;
 }
 
 header .profile-thumbnail {
@@ -137,4 +138,74 @@ footer .cta button {
 .doubleup {
   max-width: 20vw;
   flex: 2 2 auto;
+}
+
+/*lesson 4*/
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.aside {
+  text-align:left;
+}
+
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+.aside-2 {
+  background: hotpink;
+}
+
+.product-container {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:left;
+  align-content: flex-start;
+  min-width: 0;
+  width: auto;
+  margin-right:-10px;
+}
+
+.product-item {
+  min-width:250px;
+  max-width:280px;
+    flex:2 2 0px;
+    padding:20px;
+    margin: 0px 10px 10px 0px;
+  background-color:white;
+  border:1px solid black;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 4 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; };
 }
